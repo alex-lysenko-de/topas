@@ -37,7 +37,7 @@ Source: "https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.4.
 
 [Run]
 ; Run Tesseract OCR installer silently
-Filename: "{tmp}\tesseract_installer.exe"; Parameters: ""; WorkingDir: "{tmp}"; StatusMsg: "Installing Tesseract OCR (this may take a few minutes)..."; Flags: skipifdoesntexist waituntilterminated
+Filename: "{tmp}\tesseract_installer.exe"; WorkingDir: "{tmp}"; StatusMsg: "Installing Tesseract OCR (this may take a few minutes)..."; Flags: skipifdoesntexist waituntilterminated
 
 ; Create shortcuts for your application
 Filename: "{app}\topas.exe"; Description: "{cm:LaunchProgram,Clipboard Plus}"; Flags: postinstall skipifdoesntexist nowait
