@@ -77,7 +77,7 @@ Make sure the following tools are installed and added to your system's `PATH`:
 
 If you do not want to manually install **AutoHotkey**, **Python**, and **Tesseract OCR**, you can use the pre-packaged installer:
 
-📥 **[Download Topas_setup.exe](https://drive.google.com/drive/folders/1TNIcx-GAuUEL9xKn6Esbn00WVHYzQa0D?usp=sharing)**
+📥 **[Download Topas_setup_v1.0.exe](https://github.com/alex-lysenko-de/topas/releases/download/ver1.0/Topas_Setup_v1.0.exe)**
 
 This installer will:
 - Download the required `.exe` files
