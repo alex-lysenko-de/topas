@@ -70,7 +70,7 @@ Make sure the following tools are installed and added to your system's `PATH`:
 3. Double-click `topas.ahk` to run the script
 4. The script will start minimized in the system tray
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 
 ## Alternative Installation
@@ -88,7 +88,7 @@ This installer will:
 
 ⚠️ **Note:** This method should be used only as a last resort, if you prefer not to perform the manual installation of prerequisites.
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 
 ## Usage
@@ -121,7 +121,7 @@ Right-click the tray icon to access:
 
 Double-click the tray icon to quickly open settings.
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 ## Settings Management
 
@@ -137,7 +137,7 @@ TOPAS creates temporary files in your system temp directory:
 - `topas_log.txt` - Tesseract log output
 - `topas_settings.ini` - your saved settings
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 ## Tips for Best OCR Results
 
@@ -155,7 +155,7 @@ TOPAS creates temporary files in your system temp directory:
    - Avoid blurry or heavily compressed images
    - Larger text generally produces better results
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 ## Troubleshooting
 
@@ -165,7 +165,7 @@ If OCR fails:
 3. Ensure you have the required language packs installed for Tesseract
 4. Check the OCR result field for error messages
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 
 ## File Structure
@@ -175,7 +175,7 @@ project-folder/
 ├── screenshot.py      # Python screenshot utility
 └── README.md         # This file
 ```
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 
 ## License
@@ -204,5 +204,5 @@ MIT License. Feel free to modify and share.
 
 *OCR results displayed in the GUI with recognized text*
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
