@@ -2,11 +2,12 @@
 
 TOPAS is an AutoHotkey v2 script that allows you to capture selected screen areas and perform OCR (Optical Character Recognition) using Tesseract. The script provides a convenient GUI for configuring recognition settings and runs minimized in the system tray.
 
+
 ## Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
   - [Required Software](#-required-software)
-  - [Other requirements](#-other_requirements)
+  - [Other requirements](#-other-requirements)
 - [Installation](#installation)
 - [Alternative Installation](#alternative-installation)
 - [Usage](#usage)
@@ -34,7 +35,7 @@ TOPAS is an AutoHotkey v2 script that allows you to capture selected screen area
 - **System tray integration**: Runs minimized with easy access through tray menu
 - **Clipboard integration**: Recognized text is automatically copied to clipboard
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 
 ## Prerequisites
@@ -60,7 +61,7 @@ Make sure the following tools are installed and added to your system's `PATH`:
 - You should install additional Tesseract language packs: `deu` (German), `rus` (Russian), `ukr` (Ukrainian)
 - Ensure `python.exe` and `tesseract.exe` are accessible from command line (please include them to PATH)
 
-[🔙ToC](#table_of_contents)
+[🔙ToC](#table-of-contents)
 -----
 
 ## Installation
@@ -180,7 +181,7 @@ project-folder/
 
 ## License
 
-MIT License. Feel free to modify and share.
+MIT License. Feel free to modify and share. 
 
 ## Screenshots
 
@@ -206,3 +207,4 @@ MIT License. Feel free to modify and share.
 
 [🔙ToC](#table-of-contents)
 -----
+
