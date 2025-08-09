@@ -2,6 +2,29 @@
 
 TOPAS is an AutoHotkey v2 script that allows you to capture selected screen areas and perform OCR (Optical Character Recognition) using Tesseract. The script provides a convenient GUI for configuring recognition settings and runs minimized in the system tray.
 
+## Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+  - [Required Software](#-required-software)
+  - [Other requirements](#-other_requirements)
+- [Installation](#installation)
+- [Alternative Installation](#alternative-installation)
+- [Usage](#usage)
+  - [First Launch](#first-launch)
+  - [Taking OCR Screenshots](#taking-ocr-screenshots)
+  - [System Tray Menu](#system-tray-menu)
+- [Settings Management](#settings-management)
+  - [Automatic Settings](#automatic-settings)
+  - [Temporary Files](#temporary-files)
+- [Tips for Best OCR Results](#tips-for-best-ocr-results)
+- [Troubleshooting](#troubleshooting)
+- [File Structure](#file-structure)
+- [License](#license)
+- [Screenshots](#screenshots)
+
+
+-----
+
 ## Features
 
 - **Quick screenshot capture**: Use hotkey combination to capture screen areas
@@ -10,6 +33,9 @@ TOPAS is an AutoHotkey v2 script that allows you to capture selected screen area
 - **Settings persistence**: Your preferences are automatically saved and restored
 - **System tray integration**: Runs minimized with easy access through tray menu
 - **Clipboard integration**: Recognized text is automatically copied to clipboard
+
+[🔙ToC](#table_of_contents)
+-----
 
 ## Prerequisites
 
@@ -29,10 +55,13 @@ Make sure the following tools are installed and added to your system's `PATH`:
 4. **screenshot.py**  
    Python script for capturing screenshots (must be in the same directory as topas.ahk).
 
-### ⚙️ Optional
+### Other requirements
 
-- Additional Tesseract language packs: `deu` (German), `rus` (Russian), `ukr` (Ukrainian)
-- Ensure `python.exe` and `tesseract.exe` are accessible from command line
+- You should install additional Tesseract language packs: `deu` (German), `rus` (Russian), `ukr` (Ukrainian)
+- Ensure `python.exe` and `tesseract.exe` are accessible from command line (please include them to PATH)
+
+[🔙ToC](#table_of_contents)
+-----
 
 ## Installation
 
@@ -40,6 +69,27 @@ Make sure the following tools are installed and added to your system's `PATH`:
 2. Ensure all prerequisites are installed and in your system PATH
 3. Double-click `topas.ahk` to run the script
 4. The script will start minimized in the system tray
+
+[🔙ToC](#table_of_contents)
+-----
+
+## Alternative Installation
+
+If you do not want to manually install **AutoHotkey**, **Python**, and **Tesseract OCR**, you can use the pre-packaged installer:
+
+📥 **[Download Topas_setup.exe](https://drive.google.com/drive/folders/1TNIcx-GAuUEL9xKn6Esbn00WVHYzQa0D?usp=sharing)**
+
+This installer will:
+- Download the required `.exe` files
+- Install the software automatically
+- Add the necessary paths to your system `PATH` variable
+
+📺 **Details can be seen in this video:** [Watch on YouTube](http://youtube.com/XXX)
+
+⚠️ **Note:** This method should be used only as a last resort, if you prefer not to perform the manual installation of prerequisites.
+
+[🔙ToC](#table_of_contents)
+-----
 
 ## Usage
 
@@ -71,6 +121,8 @@ Right-click the tray icon to access:
 
 Double-click the tray icon to quickly open settings.
 
+[🔙ToC](#table_of_contents)
+-----
 ## Settings Management
 
 ### Automatic Settings
@@ -85,6 +137,8 @@ TOPAS creates temporary files in your system temp directory:
 - `topas_log.txt` - Tesseract log output
 - `topas_settings.ini` - your saved settings
 
+[🔙ToC](#table_of_contents)
+-----
 ## Tips for Best OCR Results
 
 1. **Choose appropriate PSM mode**:
@@ -101,6 +155,8 @@ TOPAS creates temporary files in your system temp directory:
    - Avoid blurry or heavily compressed images
    - Larger text generally produces better results
 
+[🔙ToC](#table_of_contents)
+-----
 ## Troubleshooting
 
 If OCR fails:
@@ -109,6 +165,9 @@ If OCR fails:
 3. Ensure you have the required language packs installed for Tesseract
 4. Check the OCR result field for error messages
 
+[🔙ToC](#table_of_contents)
+-----
+
 ## File Structure
 ```
 project-folder/
@@ -116,6 +175,8 @@ project-folder/
 ├── screenshot.py      # Python screenshot utility
 └── README.md         # This file
 ```
+[🔙ToC](#table_of_contents)
+-----
 
 ## License
 
@@ -142,3 +203,6 @@ MIT License. Feel free to modify and share.
 ![OCR Results](img/6.png)
 
 *OCR results displayed in the GUI with recognized text*
+
+[🔙ToC](#table_of_contents)
+-----

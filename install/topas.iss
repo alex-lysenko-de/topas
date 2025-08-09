@@ -4,13 +4,10 @@
 [Setup]
 AppName=Topas
 AppVersion=1.0
-; The value of AppPublisher is displayed in the Add/Remove Programs control panel.
 AppPublisher=Alexander Lysenko
 DefaultDirName={autopf}\Topas
 DefaultGroupName=Topas
 AllowNoIcons=yes
-; Uncomment the following line to run in non administrative install mode (install for current user only.)
-;PrivilegesRequired=lowest
 OutputBaseFilename=Topas_Setup
 Compression=lzma
 SolidCompression=yes
@@ -23,37 +20,21 @@ Name: "deutsch"; MessagesFile: "compiler:Languages\German.isl"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 6.2
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce
+Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: checkedonce; OnlyBelowVersion: 6.2
 
 [Files]
 ; Main application files
 Source: ".\dist\topas.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\dist\screenshot.exe"; DestDir: "{app}"; Flags: ignoreversion
-
-; Tesseract OCR Installer (downloaded and run silently)
-; Change this URL if a newer version is available or if the link changes
-Source: "https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-5.4.0.20240606.exe"; DestDir: "{tmp}"; DestName: "tesseract_installer.exe"; Flags: dontcopy noencryption external
+Source: ".\dist\setup_tesseract.cmd"; DestDir: "{app}"; Flags: ignoreversion
 
 [Run]
-; Run Tesseract OCR installer silently
-Filename: "{tmp}\tesseract_installer.exe"; WorkingDir: "{tmp}"; StatusMsg: "Installing Tesseract OCR (this may take a few minutes)..."; Flags: skipifdoesntexist waituntilterminated
+; Run Tesseract OCR setup script
+Filename: "{cmd}"; Parameters: "/C ""{app}\setup_tesseract.cmd"""; \
+    WorkingDir: "{app}"; StatusMsg: "Downloading and installing Tesseract OCR (this may take a few minutes)..."; \
+    Flags: waituntilterminated
 
 ; Create shortcuts for your application
-Filename: "{app}\topas.exe"; Description: "{cm:LaunchProgram,Clipboard Plus}"; Flags: postinstall skipifdoesntexist nowait
-Filename: "{app}\topas.exe"; Parameters: ""; WorkingDir: "{app}"; Tasks: desktopicon; Description: "{cm:CreateDesktopIcon}"; Flags: runminimized
-Filename: "{app}\topas.exe"; Parameters: ""; WorkingDir: "{app}"; Tasks: quicklaunchicon; Description: "{cm:CreateQuickLaunchIcon}"; Flags: runminimized
+Filename: "{app}"; Flags: shellexec
 
-[Icons]
-Name: "{group}\Clipboard Plus"; Filename: "{app}\topas.exe"
-Name: "{autoprograms}\Clipboard Plus\Uninstall Clipboard Plus"; Filename: "{uninstallexe}"
-Name: "{autodesktop}\Clipboard Plus"; Filename: "{app}\topas.exe"; Tasks: desktopicon
-
-[UninstallRun]
-; Optionally, you can add a command to uninstall Tesseract OCR here if needed.
-; This would depend on Tesseract's uninstaller supporting silent uninstallation.
-; Example (untested for Tesseract): Filename: "{pf}\Tesseract-OCR\unins000.exe"; Parameters: "/SILENT"; Flags: skipifdoesntexist
-
-[Code]
-begin
-end.
