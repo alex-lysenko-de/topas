@@ -1,6 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
 
+REM === Add Tesseract to system PATH ===
+set "TESS_PATH=C:\Program Files\Tesseract-OCR"
+echo Adding Tesseract to the system PATH...
+powershell -Command "[Environment]::SetEnvironmentVariable('Path', $env:Path + ';%TESS_PATH%', 'Machine')"
+
+
 REM === URL for downloading Tesseract Setup ===
 set "TES_EXE_URL=https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.3.0.20221214.exe"
 
@@ -23,17 +29,6 @@ echo Installing Tesseract OCR with languages: English, German, Russian...
 echo Cleaning up temporary files...
 del /f /q "%TEMP_FILE%"
 
-
-REM === Add Tesseract to system PATH ===
-set "TESS_PATH=C:\Program Files\Tesseract-OCR"
-
-REM Check if the directory exists
-if exist "%TESS_PATH%" (
-    echo Adding Tesseract to the system PATH...
-    powershell -Command "[Environment]::SetEnvironmentVariable('Path', $env:Path + ';%TESS_PATH%', 'Machine')"
-) else (
-    echo WARNING: Tesseract installation folder not found: %TESS_PATH%
-)
 
 echo Tesseract OCR installation completed successfully.
 endlocal
