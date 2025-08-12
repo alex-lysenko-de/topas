@@ -85,7 +85,7 @@ This installer will:
 - Install the software automatically
 - Add the necessary paths to your system `PATH` variable
 
-📺 **Details can be seen in this video:** [Watch on YouTube](http://youtube.com/XXX)
+📺 **Details can be seen in this video:** [Watch on YouTube](https://youtu.be/GRAZw8rwOnA)
 
 ⚠️ **Note:** This method should be used only as a last resort, if you prefer not to perform the manual installation of prerequisites.
 
